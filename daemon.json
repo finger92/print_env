@@ -1,0 +1,18 @@
+{
+  "exec-opts": [
+    "native.cgroupdriver=cgroupfs"
+  ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2",
+  "data-root": "/data/docker",
+  "default-runtime": "nvidia",
+  "runtimes": {
+    "nvidia": {
+      "path": "/usr/bin/nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  }
+}
